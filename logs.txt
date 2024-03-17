@@ -40,3 +40,114 @@ Author: micaaprocofio <micaelaprocofio@gmail.com>
 Date:   Sun Mar 17 00:23:49 2024 -0300
 
     Mensaje de commit
+
+mica@192 lab-0 % git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+mica@192 lab-0 % git config --global color.ui auto
+mica@192 lab-0 % git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+mica@192 lab-0 % git remote -v
+mica@192 lab-0 % git remote add origin https://github.com/micaaprocofio/lab-0.git
+mica@192 lab-0 % git remote -v                                                   
+origin	https://github.com/micaaprocofio/lab-0.git (fetch)
+origin	https://github.com/micaaprocofio/lab-0.git (push)
+mica@192 lab-0 % git branch -M main
+mica@192 lab-0 % git push -u origin main
+Username for 'https://github.com': micaaprocofio
+Password for 'https://micaaprocofio@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/micaaprocofio/lab-0.git/'
+mica@192 lab-0 % git push -u origin main
+Username for 'https://github.com': micaaprocofio
+Password for 'https://micaaprocofio@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/micaaprocofio/lab-0.git/'
+mica@192 lab-0 % git push -u origin main
+Username for 'https://github.com': micaaprocofio
+Password for 'https://micaaprocofio@github.com': 
+
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/micaaprocofio/lab-0.git/'
+mica@192 lab-0 % 
+mica@192 lab-0 % git push -u origin main
+Username for 'https://github.com': micaaprocofio
+Password for 'https://micaaprocofio@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/micaaprocofio/lab-0.git/'
+mica@192 lab-0 % git push -u origin main
+Username for 'https://github.com': micaaprocofio
+Password for 'https://micaaprocofio@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 252 bytes | 252.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/micaaprocofio/lab-0.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+mica@192 lab-0 % git config --global credential.helper cache
+mica@192 lab-0 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+mica@192 lab-0 % git branch develop              
+mica@192 lab-0 % git checkout develop      
+Switched to branch 'develop'
+mica@192 lab-0 % git status
+On branch develop
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+mica@192 lab-0 % git add .                                                       
+mica@192 lab-0 % git commit -m "Mensaje de commit"                               
+[develop 769ce27] Mensaje de commit
+ 1 file changed, 42 insertions(+)
+ create mode 100644 logs.txt
+mica@192 lab-0 % git reset --soft HEAD^
+mica@192 lab-0 % git status
+On branch develop
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   logs.txt
+
+mica@192 lab-0 % git commit -m "Añadi logs de git"
+[develop b3c7c75] Añadi logs de git
+ 1 file changed, 42 insertions(+)
+ create mode 100644 logs.txt
+mica@192 lab-0 % git push origin develop
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 806 bytes | 806.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/micaaprocofio/lab-0/pull/new/develop
+remote: 
+To https://github.com/micaaprocofio/lab-0.git
+ * [new branch]      develop -> develop
+mica@192 lab-0 % git checkout -b feat/lab0        
+Switched to a new branch 'feat/lab0'
