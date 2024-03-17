@@ -1,0 +1,42 @@
+mica@192 lab-0 % git init
+Initialized empty Git repository in /Users/mica/Projects/lab-0/.git/
+mica@192 lab-0 % ls -l
+total 0
+mica@192 lab-0 % touch readme.txt
+mica@192 lab-0 % ls
+readme.txt
+mica@192 lab-0 % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	readme.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+mica@192 lab-0 % git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+	add
+mica@192 lab-0 % git add .       
+mica@192 lab-0 % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   readme.txt
+
+mica@192 lab-0 % git commit -m "Mensaje de commit" 
+[main (root-commit) 2fdc8da] Mensaje de commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+mica@192 lab-0 % git log
+commit 2fdc8da6e941bb70e9509a9295ced01d6d7d9aae (HEAD -> main)
+Author: micaaprocofio <micaelaprocofio@gmail.com>
+Date:   Sun Mar 17 00:23:49 2024 -0300
+
+    Mensaje de commit
